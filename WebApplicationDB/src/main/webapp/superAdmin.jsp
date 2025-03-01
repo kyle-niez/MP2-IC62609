@@ -19,7 +19,7 @@
 <body>
     <h2>Admin Panel</h2>
     <h3>User Management</h3>
-    <a href="create.jsp">Create User</a> | 
+    <a href="createAdmin.jsp">Create User</a> | 
     <a href="updateAdmin.jsp">Update User</a> | 
     <a href="deleteAdmin.jsp">Delete User</a>
     

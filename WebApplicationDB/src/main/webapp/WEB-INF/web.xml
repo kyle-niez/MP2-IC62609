@@ -32,6 +32,10 @@
         <servlet-class>servlet.UpdateUserServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>UpdateAdminServlet</servlet-name>
+        <servlet-class>servlet.UpdateAdminServlet</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>DeleteUserServlet</servlet-name>
         <servlet-class>servlet.DeleteUserServlet</servlet-class>
     </servlet>
@@ -62,6 +66,10 @@
     <servlet-mapping>
         <servlet-name>UpdateUserServlet</servlet-name>
         <url-pattern>/updateUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateAdminServlet</servlet-name>
+        <url-pattern>/updateAdmin</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>DeleteUserServlet</servlet-name>

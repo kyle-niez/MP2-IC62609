@@ -8,9 +8,9 @@
     <%
        List updatedRecords = (List) request.getAttribute("updatedRecords");
        List deletedRecords = (List) request.getAttribute("deletedRecords");
-
-       if (updatedRecords != null && !updatedRecords.isEmpty()) {
     %>
+    
+    <% if (updatedRecords != null && !updatedRecords.isEmpty()) { %>
        <h2>Updated User Information</h2>
        <table border="1" cellpadding="5">
            <tr>
@@ -31,11 +31,7 @@
               }
            %>
        </table>
-    <%
-       } 
-      
-       else if (deletedRecords != null && !deletedRecords.isEmpty()) {
-    %>
+    <% } else if (deletedRecords != null && !deletedRecords.isEmpty()) { %>
        <h2>Deleted User Information</h2>
        <table border="1" cellpadding="5">
            <tr>
@@ -56,14 +52,18 @@
               }
            %>
        </table>
-    <%
-       } else {
-    %>
+    <% } else { %>
        <p>No records were updated or deleted.</p>
-    <%
-       }
-    %>
+    <% } %>
+    
     <br>
-    <a href="admin.jsp">Return to Admin Page</a>
+    <form action="admin.jsp" method="get">
+        <input type="submit" value="Return to Admin Page">
+    </form>
+    
+    <%
+       session.removeAttribute("updatedRecords");
+       session.removeAttribute("deletedRecords");
+    %>
 </body>
 </html>
